@@ -33,7 +33,7 @@ If using the GPU, we recommend a card with >10GB of RAM to run the example data 
 Load the network in the /network folder. There is also a screengrab showing the network if loading fails.
 
 # Installation
-Download as a zip and copy to /gpi/triggeredGASSP folder, or clone this repo into your ~/gpi directory by entering:
+Download as a zip and copy to /gpi/triggeredGASSP folder (the folder name needs to be "triggeredGASSP", or clone this repo into your ~/gpi directory by entering:
 
     $ git clone https://github.com/jhu-cardiac-mri/triggeredGASSP.git triggeredGASSP
 
