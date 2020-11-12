@@ -21,7 +21,9 @@ use
 
 in 
 
-    /gridding
+    /gridding/
+    
+    /spiral/
 
 # GPU
 Some nodes have a GPU version that requires CUPY. 
