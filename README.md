@@ -29,6 +29,9 @@ in
 Some nodes have a GPU version that requires CUPY. 
 If using the GPU, we recommend a card with >10GB of RAM to run the example data (We are using NVIDIA GeForce GTX 1080 Ti).
 
+# Network
+Load the network in the /network folder. There is also a screengrab showing the network if loading fails.
+
 # Installation
 Download as a zip or clone this repo into your ~/gpi directory by entering:
 
