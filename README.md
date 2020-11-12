@@ -3,7 +3,7 @@ This repository contains the GPI nodes and network used to reconstruct phase con
 
 Example data can be downloaded at
 
-    https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/mschar3_jh_edu/EnPgpmVd7RtKiHAk-eWcRhYB7TLz-mKoSrQ5Yh5MbLzobA?e=wOWo8h
+https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/mschar3_jh_edu/EnPgpmVd7RtKiHAk-eWcRhYB7TLz-mKoSrQ5Yh5MbLzobA?e=wOWo8h
     
 and should be copied to the folder called "example data".
 
