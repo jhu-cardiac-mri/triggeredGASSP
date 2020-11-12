@@ -1,0 +1,7652 @@
+# This file was written with GPI v1.1.4 using Network v3. Do not edit this line.
+{
+ "DATETIME": "Tue Nov 10 23:05:59 2020",
+ "GPI_VERSION": "1.1.4",
+ "HEADER": "This is a GPI Network File",
+ "NETWORK_VERSION": "3",
+ "PLATFORM": {
+  "HOSTNAME": "Michaels-Mac-Pro.local",
+  "NUM_CPUS": 12,
+  "OS": "Darwin",
+  "OSX": "10.13.6",
+  "PLATFORM": "Darwin-17.7.0-x86_64-i386-64bit",
+  "PYTHON": "CPython",
+  "PYTHON_VERSION": "3.7.3",
+  "TOTAL_PHYMEM": 137438953472,
+  "TOTAL_PHYMEM_STR": "128.00 GB"
+ },
+ "TOTAL_PMEM": "18374081912",
+ "WALLTIME": "12.038106918334961",
+ "layouts": [],
+ "nodes": {
+  "macroNodes": [],
+  "nodes": [
+   {
+    "avgwalltime": "7.799595952033997",
+    "id": 5976830024,
+    "key": "triggeredGASSP.shapers.FilterAndZeroFill_GPU",
+    "name": "FilterAndZeroFill_GPU",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976830024,
+         "portID": 5976738408,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976722168,
+         "portID": 5976762264,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976738408,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911689544,
+         "portID": 5911707720,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976830024,
+         "portID": 5976738552,
+         "portName": "Zero filled data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976738552,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "Zero filled data",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976738696,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "Hann 2D window",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976738840,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "Hann 1D window",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -123.25999999999999,
+     72.82
+    ],
+    "stdwalltime": "5.86273992061615",
+    "walltime": "13.662335872650146",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5976832904,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "compute",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976833624,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Fourier interpolation factor",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5976769016,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Hann 2D Filter",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976769736,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 90,
+        "visible": true
+       },
+       "name": "Hann 2D Width (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5971020968,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 20,
+        "visible": true
+       },
+       "name": "Hann 2D Taper (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5852553864,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Flip Image",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "OFF",
+        "collapsed": false,
+        "id": 5976771032,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Hann 1D Filter",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976771752,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 100,
+        "visible": false
+       },
+       "name": "Hann 1D Width (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976736104,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 30,
+        "visible": false
+       },
+       "name": "Hann 1D Taper (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976737256,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 5,
+        "visible": false
+       },
+       "name": "Hann 1D StopVal (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.03319883346557617",
+    "id": 5910706360,
+    "key": "gpi_core.display.ImageDisplay",
+    "name": "ImageDisplay",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910706360,
+         "portID": 5910790360,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5911783176,
+         "portID": 5910579960,
+         "portName": "Collapse Single Dim",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5910790360,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910790504,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910790648,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "temp",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     217.24,
+     199.32
+    ],
+    "stdwalltime": "0.0",
+    "walltime": "0.03319883346557617",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910741928,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 2,
+        "visible": false
+       },
+       "name": "Complex Display",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": true,
+        "id": 5910742936,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Color Map",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910744088,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Edge Pixels",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910744952,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Black Pixels",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910758168,
+        "inport": false,
+        "interp": true,
+        "line": null,
+        "noscroll": true,
+        "outport": false,
+        "points": null,
+        "quietval": null,
+        "scale": 1.0,
+        "val": null,
+        "visible": true
+       },
+       "name": "Viewport:",
+       "type": "<class 'gpi.widgets.DisplayBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910770024,
+        "inport": false,
+        "max": 48,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 34,
+        "visible": true
+       },
+       "name": "Slice",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910704344,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Slice/Tile Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910695368,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Extra Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910694648,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 1,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "# Columns",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910771752,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 1,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "# Rows",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910772616,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": {
+         "ceiling": 70,
+         "floor": 0,
+         "level": 35,
+         "window": 71
+        },
+        "visible": true
+       },
+       "name": "L W F C:",
+       "type": "<class '/Users/michaelschar/gpi_stack/envs/gpi/lib/python3.7/site-packages/gpi_core/display/GPI/ImageDisplay_GPI.WindowLevel'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910785336,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Scalar Display",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 3,
+        "id": 5910794312,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 10.0,
+        "min": 0.1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 0.05,
+        "val": 1.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Gamma",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910795176,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Zero Ref",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "Auto-Range On",
+        "collapsed": false,
+        "id": 5910796040,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Fix Range",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5910796760,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": -35.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Range Min",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5910797624,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 35.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Range Max",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "1.73309326171875",
+    "id": 5910823128,
+    "key": "triggeredGASSP.shapers.FilterAndZeroFill",
+    "name": "FilterAndZeroFill",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910823128,
+         "portID": 5911488984,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970789864,
+         "portID": 5970876312,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911488984,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976803800,
+         "portID": 5976864088,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5910823128,
+         "portID": 5911489128,
+         "portName": "Zero filled data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911489128,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "Zero filled data",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911489272,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "Hann 2D window",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911489416,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "Hann 1D window",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     122.74000000000001,
+     74.82
+    ],
+    "stdwalltime": "0.0",
+    "walltime": "1.73309326171875",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910825720,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "compute",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910826440,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Fourier interpolation factor",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5910827368,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Hann 2D Filter",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910828088,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 90,
+        "visible": true
+       },
+       "name": "Hann 2D Width (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 4819685448,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 20,
+        "visible": true
+       },
+       "name": "Hann 2D Taper (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5852554728,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Flip Image",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "OFF",
+        "collapsed": false,
+        "id": 5910829384,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Hann 1D Filter",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910830104,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 100,
+        "visible": false
+       },
+       "name": "Hann 1D Width (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911486680,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 30,
+        "visible": false
+       },
+       "name": "Hann 1D Taper (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911487832,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 5,
+        "visible": false
+       },
+       "name": "Hann 1D StopVal (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "37.99738526344299",
+    "id": 5911689544,
+    "key": "triggeredGASSP.gridding.AutoFocusFlow2D",
+    "name": "AutoFocusFlow2D",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911689544,
+         "portID": 5911707720,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976830024,
+         "portID": 5976738552,
+         "portName": "Zero filled data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911707720,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911689544,
+         "portID": 5911707864,
+         "portName": "coords",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911707864,
+      "obligation": 200,
+      "portnum": 1,
+      "porttitle": "coords",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911689544,
+         "portID": 5911708008,
+         "portName": "params_in",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911708008,
+      "obligation": 200,
+      "portnum": 2,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911708152,
+      "obligation": 200,
+      "portnum": 3,
+      "porttitle": "filter",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911708296,
+      "obligation": 200,
+      "portnum": 4,
+      "porttitle": "data reacquired",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911708440,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "deblurred data",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910109496,
+         "portID": 5910099864,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5911689544,
+         "portID": 5911708584,
+         "portName": "deblurred data flow",
+         "portNum": 1
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5910150600,
+         "portID": 5911269592,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5911689544,
+         "portID": 5911708584,
+         "portName": "deblurred data flow",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5911708584,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "deblurred data flow",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911708728,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "Cardiac Phase, vessel, FWHM area, sharpness, freq, snr",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911708872,
+      "obligation": null,
+      "portnum": 3,
+      "porttitle": "blurred array",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911709016,
+      "obligation": null,
+      "portnum": 4,
+      "porttitle": "blurred array flow",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911709160,
+      "obligation": null,
+      "portnum": 5,
+      "porttitle": "imaginary integral for deblurring",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911709304,
+      "obligation": null,
+      "portnum": 6,
+      "porttitle": "debug",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911709448,
+      "obligation": null,
+      "portnum": 7,
+      "porttitle": "FWHM_array",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911709592,
+      "obligation": null,
+      "portnum": 8,
+      "porttitle": "debug3",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911709736,
+      "obligation": null,
+      "portnum": 9,
+      "porttitle": "phantom_area",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911709880,
+      "obligation": null,
+      "portnum": 10,
+      "porttitle": "phantom_sharpness",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911710024,
+      "obligation": null,
+      "portnum": 11,
+      "porttitle": "phantom_freq",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911710168,
+      "obligation": null,
+      "portnum": 12,
+      "porttitle": "phantom_snr",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911710312,
+      "obligation": null,
+      "portnum": 13,
+      "porttitle": "kspace",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911710456,
+      "obligation": null,
+      "portnum": 14,
+      "porttitle": "Debug Data",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -123.25999999999999,
+     107.82
+    ],
+    "stdwalltime": "37.615910214686444",
+    "walltime": "78.1449339389801",
+    "widget_settings": {
+     "label": "select cardiac phase, double click \"image\", select \"Pointer\", click on vessel, click compute",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911798840,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "data type",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911799416,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 4,
+        "visible": false
+       },
+       "name": "phantom",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911800424,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "perform..",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911801000,
+        "inport": false,
+        "interp": true,
+        "line": [
+         [
+          240.0,
+          239.375
+         ],
+         [
+          240.0,
+          239.375
+         ]
+        ],
+        "noscroll": true,
+        "outport": false,
+        "points": [
+         240.0,
+         239.375
+        ],
+        "quietval": null,
+        "scale": 1.6,
+        "val": null,
+        "visible": true
+       },
+       "name": "image",
+       "type": "<class 'gpi.widgets.DisplayBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911657208,
+        "inport": false,
+        "interp": true,
+        "line": null,
+        "noscroll": true,
+        "outport": false,
+        "points": null,
+        "quietval": null,
+        "scale": 1.4,
+        "val": null,
+        "visible": true
+       },
+       "name": "results",
+       "type": "<class 'gpi.widgets.DisplayBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911663960,
+        "inport": false,
+        "max": 7,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 1,
+        "visible": true
+       },
+       "name": "FWHM slider 50 55 60 65 70 75 80",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911688248,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "Areas measured with FWHM and Sharpness:\nCardiac phase    location    area [mm^2]    sharpness [%]     deblurr freq [Hz]     snr\n                   34    242/240   15.37922467849931    1.1079666e-08/0.06276398    54.787757873535156  5.0  0.0\n                   35    242/240   14.728252205335318    2.4214387e-08/0.06288705    54.28184127807617  5.0  39.75585399749263\n                   36    242/240   14.980504038686364    1.5133992e-09/0.06246328    53.61583709716797  0.0  39.82686708813278\n                   37    242/240   15.265304495695611    1.3576242e-09/0.062454008    53.457061767578125  0.0  34.75973953745221\n                   38    242/240   15.509419173132109    1.8109974e-09/0.060818933    53.83129119873047  0.0  32.883802101957244\n                   33    242/240   15.696573759166755    3.0898345e-08/0.06289471    53.74500274658203  5.0  47.76974517818581\n                   32    242/240   15.769808162397705    1.2538314e-09/0.063368395    53.26665496826172  0.0  33.10790890356604\n                   31    242/240   15.802356786055904    2.3999633e-09/0.063846454    53.754478454589844  0.0  18.022946646499477\n                   30    242/240   15.615202200021256    4.2011298e-08/0.06506511    53.650150299072266  5.0  13.614696140830008\n\nFWHM              mean                 15.416293944332258 and SD: 0.34773818658612643\nSharpness        mean                 53.82111952039931 and SD: 0.43054653079209054\n",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Areas:",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5852428760,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 60,
+        "visible": true
+       },
+       "name": "image ceiling",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911665400,
+        "inport": false,
+        "max": 48,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 34,
+        "visible": true
+       },
+       "name": "cardiac phase",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5911666552,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "compute",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5911638664,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 100.0,
+        "min": 0.01,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 13.08,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "adc (ms)",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911639528,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 5,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "focus radius (mm)",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911640392,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 50,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "frequency range (Hz)",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911641256,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 2,
+        "val": 21,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "frequency steps",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911699528,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 1,
+        "visible": true
+       },
+       "name": "cardiac phases type",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911700104,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 48,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 9,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "cardiac phases",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5911700968,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "FWHM area",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911701688,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 350,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "FOV (mm)",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911702552,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 3,
+        "visible": true
+       },
+       "name": "Fourier interpolation factor",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.0597461462020874",
+    "id": 5911519592,
+    "key": "triggeredGASSP.fileIO.ReadNPY",
+    "name": "ReadNPY",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911519592,
+         "portID": 5909792952,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909792952,
+      "obligation": 200,
+      "portnum": 0,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909894056,
+         "portName": "Spiral Angles",
+         "portNum": 8
+        },
+        "src": {
+         "nodeID": 5911519592,
+         "portID": 5909793096,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909793096,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     22.74000000000001,
+     -95.18
+    ],
+    "stdwalltime": "0.029739022254943848",
+    "walltime": "0.08948516845703125",
+    "widget_settings": {
+     "label": "This reads the spiral rotation angles",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911588728,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "created: 31/10/2020\naccessed: 10/11/2020\nmodified: 31/10/2020\nUID: 501\nGID: 20\nfile size (bytes): 4128\ndimensions: [1000]\ntype: float32\n",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "I/O Info:",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "directory": "",
+        "id": 5909791080,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "",
+        "visible": false
+       },
+       "name": "File Browser",
+       "type": "<class 'gpi.widgets.OpenFileBrowser'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909791656,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "../RCA_triggeredGASSP_spiral_angles.npy",
+        "visible": true
+       },
+       "name": "File Name using out path from dictionary",
+       "type": "<class 'gpi.widgets.TextEdit'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5909792232,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Squeeze",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "72.88944220542908",
+    "id": 5976803800,
+    "key": "triggeredGASSP.gridding.AutoFocusFlow2D",
+    "name": "AutoFocusFlow2D",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976803800,
+         "portID": 5976864088,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5910823128,
+         "portID": 5911489128,
+         "portName": "Zero filled data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976864088,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976803800,
+         "portID": 5976864232,
+         "portName": "coords",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976864232,
+      "obligation": 200,
+      "portnum": 1,
+      "porttitle": "coords",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976803800,
+         "portID": 5976864376,
+         "portName": "params_in",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976864376,
+      "obligation": 200,
+      "portnum": 2,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976864520,
+      "obligation": 200,
+      "portnum": 3,
+      "porttitle": "filter",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976864664,
+      "obligation": 200,
+      "portnum": 4,
+      "porttitle": "data reacquired",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976864808,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "deblurred data",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911783176,
+         "portID": 5910579816,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976803800,
+         "portID": 5976864952,
+         "portName": "deblurred data flow",
+         "portNum": 1
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5910042520,
+         "portID": 5861391672,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976803800,
+         "portID": 5976864952,
+         "portName": "deblurred data flow",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5976864952,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "deblurred data flow",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976865096,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "Cardiac Phase, vessel, FWHM area, sharpness, freq, snr",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976865240,
+      "obligation": null,
+      "portnum": 3,
+      "porttitle": "blurred array",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976865384,
+      "obligation": null,
+      "portnum": 4,
+      "porttitle": "blurred array flow",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976865528,
+      "obligation": null,
+      "portnum": 5,
+      "porttitle": "imaginary integral for deblurring",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976865672,
+      "obligation": null,
+      "portnum": 6,
+      "porttitle": "debug",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976865816,
+      "obligation": null,
+      "portnum": 7,
+      "porttitle": "FWHM_array",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976865960,
+      "obligation": null,
+      "portnum": 8,
+      "porttitle": "debug3",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976866104,
+      "obligation": null,
+      "portnum": 9,
+      "porttitle": "phantom_area",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976866248,
+      "obligation": null,
+      "portnum": 10,
+      "porttitle": "phantom_sharpness",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976866392,
+      "obligation": null,
+      "portnum": 11,
+      "porttitle": "phantom_freq",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976866536,
+      "obligation": null,
+      "portnum": 12,
+      "porttitle": "phantom_snr",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976866680,
+      "obligation": null,
+      "portnum": 13,
+      "porttitle": "kspace",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976846408,
+      "obligation": null,
+      "portnum": 14,
+      "porttitle": "Debug Data",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     122.74000000000001,
+     109.82
+    ],
+    "stdwalltime": "0.0",
+    "walltime": "72.88944220542908",
+    "widget_settings": {
+     "label": "3rd interaction: select cardiac phase, double click \"image\", select \"Pointer\", click on vessel, click compute",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976966344,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "data type",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976966920,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 4,
+        "visible": false
+       },
+       "name": "phantom",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976967928,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "perform..",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976968504,
+        "inport": false,
+        "interp": true,
+        "line": null,
+        "noscroll": true,
+        "outport": false,
+        "points": null,
+        "quietval": null,
+        "scale": 1.6,
+        "val": null,
+        "visible": true
+       },
+       "name": "image",
+       "type": "<class 'gpi.widgets.DisplayBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976923016,
+        "inport": false,
+        "interp": true,
+        "line": null,
+        "noscroll": true,
+        "outport": false,
+        "points": null,
+        "quietval": null,
+        "scale": 1.4,
+        "val": null,
+        "visible": true
+       },
+       "name": "results",
+       "type": "<class 'gpi.widgets.DisplayBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976816088,
+        "inport": false,
+        "max": 7,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 1,
+        "visible": true
+       },
+       "name": "FWHM slider 50 55 60 65 70 75 80",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976802504,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "Areas measured with FWHM and Sharpness:\nCardiac phase    location    area [mm^2]    sharpness [%]     deblurr freq [Hz]     snr\n                   34    241/239   17.250770538845785    2.6161089e-09/0.058078647    58.22815704345703  0.0  0.0\n                   35    242/240   15.029326974173664    1.9756334e-09/0.062676445    53.83740234375  0.0  38.8095927183168\n                   36    242/240   14.980504038686364    7.3627515e-10/0.06246887    53.61848068237305  0.0  37.29268358407048\n                   37    242/240   15.265304495695611    5.820766e-10/0.06245415    53.45763397216797  0.0  33.6825462358618\n                   38    242/240   15.509419173132109    5.2062515e-10/0.060816843    53.83196258544922  0.0  31.493103477833\n                   33    241/239   17.096164576469338    1.5618754e-09/0.05929964    56.20832061767578  0.0  48.37896165667566\n                   32    242/240   15.761671006483155    1.5312045e-09/0.06337793    53.26124954223633  0.0  32.75905896895057\n                   31    242/240   15.802356786055904    5.35637e-09/0.06384676    53.74923324584961  0.0  17.47200526700766\n                   30    242/240   15.615202200021256    5.30251e-08/0.06506512    53.65522003173828  5.0  13.172921528227722\n\nFWHM              mean                 15.812302198840355 and SD: 0.7785233604204966\nSharpness        mean                 54.42751778496636 and SD: 1.5751878450644046\n",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Areas:",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976801640,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 60,
+        "visible": true
+       },
+       "name": "image ceiling",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976887368,
+        "inport": false,
+        "max": 48,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 34,
+        "visible": true
+       },
+       "name": "cardiac phase",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5976888520,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "compute",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5976889240,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 100.0,
+        "min": 0.01,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 13.08,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "adc (ms)",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976890104,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 5,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "focus radius (mm)",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976890968,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 50,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "frequency range (Hz)",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976928760,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 2,
+        "val": 21,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "frequency steps",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976929624,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 1,
+        "visible": true
+       },
+       "name": "cardiac phases type",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976930200,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 48,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 9,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "cardiac phases",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5976931064,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "FWHM area",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976931784,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 350,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "FOV (mm)",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976863080,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 3,
+        "visible": true
+       },
+       "name": "Fourier interpolation factor",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "22.75324535369873",
+    "id": 5909989992,
+    "key": "triggeredGASSP.gridding.FOVShift",
+    "name": "FOVShift",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909989992,
+         "portID": 5909996744,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976729496,
+         "portID": 5976774984,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909996744,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909989992,
+         "portID": 5909996888,
+         "portName": "crds",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909996888,
+      "obligation": 100,
+      "portnum": 1,
+      "porttitle": "crds",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909989992,
+         "portID": 5909997032,
+         "portName": "params_in",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909997032,
+      "obligation": 200,
+      "portnum": 2,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909903112,
+         "portID": 5909961176,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909989992,
+         "portID": 5909997176,
+         "portName": "adjusted data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909997176,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "adjusted data",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -119.25999999999999,
+     -252.18
+    ],
+    "stdwalltime": "2.1791534423828125",
+    "walltime": "24.932398796081543",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910025128,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 5,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 485,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Eff MTX XY",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910025992,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 5,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 240,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Eff MTX Z",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5910026856,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 9.44,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "dx (pixels)",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5910027720,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 45.02,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "dy (pixels)",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5909995880,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 0.0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "dz (pixels)",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.00026837984720865887",
+    "id": 5861391096,
+    "key": "gpi_core.display.Matplotlib",
+    "name": "Matplotlib",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5861391096,
+         "portID": 5977075784,
+         "portName": "in0",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976722168,
+         "portID": 5976762840,
+         "portName": "cost vs. time",
+         "portNum": 4
+        }
+       }
+      ],
+      "id": 5977075784,
+      "obligation": 200,
+      "portnum": 0,
+      "porttitle": "in0",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5861391096,
+         "portID": 5976987400,
+         "portName": "in1",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5970789864,
+         "portID": 5970876888,
+         "portName": "cost vs. time",
+         "portNum": 4
+        }
+       }
+      ],
+      "id": 5976987400,
+      "obligation": 200,
+      "portnum": 1,
+      "porttitle": "in1",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976987256,
+      "obligation": 200,
+      "portnum": 2,
+      "porttitle": "in2",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976987112,
+      "obligation": 200,
+      "portnum": 3,
+      "porttitle": "in3",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976986968,
+      "obligation": 200,
+      "portnum": 4,
+      "porttitle": "in4",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976986824,
+      "obligation": 200,
+      "portnum": 5,
+      "porttitle": "in5",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976986680,
+      "obligation": 200,
+      "portnum": 6,
+      "porttitle": "in6",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976986536,
+      "obligation": 200,
+      "portnum": 7,
+      "porttitle": "in7",
+      "porttype": 65540,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     15.740000000000009,
+     70.82
+    ],
+    "stdwalltime": "9.85083968403186e-05",
+    "walltime": "0.0002181529998779297",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "autoscale": true,
+        "collapsed": false,
+        "grid": true,
+        "id": 5977048120,
+        "inport": false,
+        "legend": false,
+        "lineOptions": [],
+        "outport": false,
+        "plotOptions": {},
+        "plotPosition": {
+         "bottom": 0.119,
+         "hspace": 0.2,
+         "left": 0.111,
+         "right": 0.913,
+         "top": 0.912,
+         "wspace": 0.2
+        },
+        "plotlabels": {
+         "title": "cost function reduction",
+         "xlabel": "time [s]",
+         "ylabel": ""
+        },
+        "quietval": null,
+        "scale": {
+         "xscale": false,
+         "yscale": false
+        },
+        "ticks": {
+         "xticknum": 4,
+         "xticks": "",
+         "yticknum": 5,
+         "yticks": ""
+        },
+        "val": null,
+        "visible": true,
+        "xlim": [
+         -59.0664246,
+         1240.3949158
+        ],
+        "xline": true,
+        "ylim": [
+         -0.1405528,
+         2.9516084
+        ],
+        "yline": true
+       },
+       "name": "Plot",
+       "type": "<class '/Users/michaelschar/gpi_stack/envs/gpi/lib/python3.7/site-packages/gpi_core/display/GPI/Matplotlib_GPI.MatplotDisplay'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "1309.6002724170685",
+    "id": 5976722168,
+    "key": "triggeredGASSP.iterative.NonLinCG-balancedPenaltyFlow_GPU",
+    "name": "NonLinCG-balancedPenaltyFlow_GPU",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976722168,
+         "portID": 5976761688,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909820184,
+         "portID": 5909894200,
+         "portName": "sorted data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976761688,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976722168,
+         "portID": 5976761832,
+         "portName": "coords",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5909820184,
+         "portID": 5909894344,
+         "portName": "sorted coords",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5976761832,
+      "obligation": 100,
+      "portnum": 1,
+      "porttitle": "coords",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976722168,
+         "portID": 5976761976,
+         "portName": "weights",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5852652456,
+         "portID": 5968402472,
+         "portName": "sdc",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976761976,
+      "obligation": 100,
+      "portnum": 2,
+      "porttitle": "weights",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976762120,
+      "obligation": 200,
+      "portnum": 3,
+      "porttitle": "coil sensitivity",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976722168,
+         "portID": 5976727912,
+         "portName": "mtx",
+         "portNum": 4
+        },
+        "src": {
+         "nodeID": 5852652456,
+         "portID": 5968404344,
+         "portName": "Effective MTX XY",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5976727912,
+      "obligation": 200,
+      "portnum": 4,
+      "porttitle": "mtx",
+      "porttype": 65540,
+      "widgetTitle": "mtx"
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976830024,
+         "portID": 5976738408,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976722168,
+         "portID": 5976762264,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976762264,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976762408,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "oversampled CSM",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976762552,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "cropped CSM",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5976762696,
+      "obligation": null,
+      "portnum": 3,
+      "porttitle": "x iterations",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5861391096,
+         "portID": 5977075784,
+         "portName": "in0",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976722168,
+         "portID": 5976762840,
+         "portName": "cost vs. time",
+         "portNum": 4
+        }
+       }
+      ],
+      "id": 5976762840,
+      "obligation": null,
+      "portnum": 4,
+      "porttitle": "cost vs. time",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -123.25999999999999,
+     37.81999999999999
+    ],
+    "stdwalltime": "138.74749851226807",
+    "walltime": "1448.3477709293365",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5976933720,
+        "immediate": false,
+        "inport": true,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": 1.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 485.03,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "mtx",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976934584,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 25,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "iterations",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 6,
+        "id": 5976935448,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.0,
+        "min": 0.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 0.03,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "lambda TV cardiac dimension",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 6,
+        "id": 5976936312,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.0,
+        "min": 0.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 0.015,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "lambda TV flow dimension",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": true,
+        "decimals": 3,
+        "id": 5976724248,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2.0,
+        "min": 1.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 0.125,
+        "val": 1.375,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "oversampling ratio",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": true,
+        "id": 5976725256,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 64,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 8,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "number of threads",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976726120,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 20,
+        "visible": true
+       },
+       "name": "Autocalibration Width (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976720296,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 50,
+        "visible": true
+       },
+       "name": "Autocalibration Taper (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5852428616,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 4,
+        "visible": true
+       },
+       "name": "Mask Floor (% of max mag)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976740200,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 20,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Autocalibration mask dilation [pixels]",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976741064,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 10,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Autocalibration SDC Iterations",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5976741928,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Dynamic data - average all dynamics for csm",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5976742648,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Golden Angle - combine dynamics before gridding",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976743368,
+        "inport": false,
+        "max": 10000,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 10000,
+        "visible": true
+       },
+       "name": "# golden angle dynamics for csm",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5976760968,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Store iterations",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "153.43283259868622",
+    "id": 5909820184,
+    "key": "triggeredGASSP.shapers.SortCardiacPhases_SG",
+    "name": "SortCardiacPhases_SG",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909901032,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909903112,
+         "portID": 5909961896,
+         "portName": "compressed data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909901032,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909901176,
+         "portName": "coords",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909901176,
+      "obligation": 100,
+      "portnum": 1,
+      "porttitle": "coords",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909893192,
+         "portName": "user_params",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909893192,
+      "obligation": 100,
+      "portnum": 2,
+      "porttitle": "user_params",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909893336,
+         "portName": "header",
+         "portNum": 3
+        },
+        "src": {
+         "nodeID": 5976849432,
+         "portID": 5976878536,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909893336,
+      "obligation": 100,
+      "portnum": 3,
+      "porttitle": "header",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909893480,
+      "obligation": 200,
+      "portnum": 4,
+      "porttitle": "R_top",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909893624,
+      "obligation": 200,
+      "portnum": 5,
+      "porttitle": "RR_array",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909893768,
+      "obligation": 200,
+      "portnum": 6,
+      "porttitle": "RR_number",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909893912,
+      "obligation": 200,
+      "portnum": 7,
+      "porttitle": "SG_data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909894056,
+         "portName": "Spiral Angles",
+         "portNum": 8
+        },
+        "src": {
+         "nodeID": 5911519592,
+         "portID": 5909793096,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909894056,
+      "obligation": 200,
+      "portnum": 8,
+      "porttitle": "Spiral Angles",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976722168,
+         "portID": 5976761688,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909820184,
+         "portID": 5909894200,
+         "portName": "sorted data",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5970789864,
+         "portID": 5970875736,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909820184,
+         "portID": 5909894200,
+         "portName": "sorted data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909894200,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "sorted data",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5852652456,
+         "portID": 5968402040,
+         "portName": "crds",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909820184,
+         "portID": 5909894344,
+         "portName": "sorted coords",
+         "portNum": 1
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5976722168,
+         "portID": 5976761832,
+         "portName": "coords",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5909820184,
+         "portID": 5909894344,
+         "portName": "sorted coords",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5909894344,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "sorted coords",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909894488,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "SDC wates",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909894632,
+      "obligation": null,
+      "portnum": 3,
+      "porttitle": "R_top_out",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909894776,
+      "obligation": null,
+      "portnum": 4,
+      "porttitle": "RR_array_out",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909894920,
+      "obligation": null,
+      "portnum": 5,
+      "porttitle": "RR_number_out",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909895064,
+      "obligation": null,
+      "portnum": 6,
+      "porttitle": "heart beats to be used",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909895208,
+      "obligation": null,
+      "portnum": 7,
+      "porttitle": "sorted SG_data",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909895352,
+      "obligation": null,
+      "portnum": 8,
+      "porttitle": "heart beats to be used based on RR",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909895496,
+      "obligation": null,
+      "portnum": 9,
+      "porttitle": "mean RMS for number of beats",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909895640,
+      "obligation": null,
+      "portnum": 10,
+      "porttitle": "debug",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909895784,
+      "obligation": null,
+      "portnum": 11,
+      "porttitle": "sorted Spiral Angles",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909895928,
+      "obligation": null,
+      "portnum": 12,
+      "porttitle": "HR Max Mean SD Spiral Gaps shift idx ms average_rr_without_outliers",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -41.25999999999999,
+     -42.18000000000001
+    ],
+    "stdwalltime": "1.0409804582595825",
+    "walltime": "152.39185214042664",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5909823064,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "computenow",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909827944,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 100,
+        "min": 5,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 100,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "MTX XY Reduction",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5909828808,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": 5.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 485.03,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Eff MTX XY",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909829672,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 2,
+        "visible": true
+       },
+       "name": "cardiac triggers",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909830536,
+        "immediate": true,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 75,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "simulated heartrate [bpm]",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909819608,
+        "immediate": true,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 4,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "simulated displacement [mm]",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5852556456,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "cardiac phases",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5852553432,
+        "immediate": true,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 40,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "# of cardiac phases",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909831544,
+        "immediate": true,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "sliding window factor [%]",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909869336,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 1,
+        "visible": true
+       },
+       "name": "Retrospective Window Optimization",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909870056,
+        "immediate": true,
+        "inport": false,
+        "label": "",
+        "max": 30,
+        "min": 3,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 20,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Window Shift Steps",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5909870920,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "coords for BART",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5909871640,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "reduce data",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909872360,
+        "immediate": true,
+        "inport": false,
+        "label": "",
+        "max": 20,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 10,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "reduce data to [s]",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5909897864,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "use self-consistent data",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909898584,
+        "immediate": true,
+        "inport": false,
+        "label": "",
+        "max": 20,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 10,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "use [s] of data",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5909899448,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "use consistent heart beat durations",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909900168,
+        "immediate": true,
+        "inport": false,
+        "label": "",
+        "max": 100,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 50,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "use % of data",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "19.661094903945923",
+    "id": 5852652456,
+    "key": "gpi_core.gridding.SDC",
+    "name": "SDC",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5852652456,
+         "portID": 5968402040,
+         "portName": "crds",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909820184,
+         "portID": 5909894344,
+         "portName": "sorted coords",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5968402040,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "crds",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5968402184,
+      "obligation": 200,
+      "portnum": 1,
+      "porttitle": "wates",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5852652456,
+         "portID": 5968402328,
+         "portName": "params_in",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5968402328,
+      "obligation": 200,
+      "portnum": 2,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976722168,
+         "portID": 5976761976,
+         "portName": "weights",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5852652456,
+         "portID": 5968402472,
+         "portName": "sdc",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5970789864,
+         "portID": 5970876024,
+         "portName": "weights",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5852652456,
+         "portID": 5968402472,
+         "portName": "sdc",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5968402472,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "sdc",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976722168,
+         "portID": 5976727912,
+         "portName": "mtx",
+         "portNum": 4
+        },
+        "src": {
+         "nodeID": 5852652456,
+         "portID": 5968404344,
+         "portName": "Effective MTX XY",
+         "portNum": 1
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5970789864,
+         "portID": 5970915688,
+         "portName": "mtx",
+         "portNum": 4
+        },
+        "src": {
+         "nodeID": 5852652456,
+         "portID": 5968404344,
+         "portName": "Effective MTX XY",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5968404344,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "Effective MTX XY",
+      "porttype": 65541,
+      "widgetTitle": "Effective MTX XY"
+     }
+    ],
+    "pos": [
+     -36.25999999999999,
+     -3.180000000000007
+    ],
+    "stdwalltime": "0.6093480587005615",
+    "walltime": "19.05174684524536",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5852653752,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "computenow",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5862770152,
+        "inport": false,
+        "max": 4,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 2,
+        "visible": true
+       },
+       "name": "Dims per Set",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5861392456,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 10,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Iterations",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5850129032,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": 2.0,
+        "outport": true,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 485.03,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Effective MTX XY",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5862771736,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": 2.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 300.0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Effective MTX Z",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5862772600,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.0,
+        "min": 0.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 0.01,
+        "val": 0.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Taper",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5968401176,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2.0,
+        "min": 0.2,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 0.1,
+        "val": 1.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "krad Scale",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.43505358695983887",
+    "id": 5976849432,
+    "key": "triggeredGASSP.fileIO.ReadPickled",
+    "name": "ReadPickled",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976849432,
+         "portID": 5976878392,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976878392,
+      "obligation": 200,
+      "portnum": 0,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909893336,
+         "portName": "header",
+         "portNum": 3
+        },
+        "src": {
+         "nodeID": 5976849432,
+         "portID": 5976878536,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976878536,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -18.25999999999999,
+     -146.18
+    ],
+    "stdwalltime": "0.06541156768798828",
+    "walltime": "0.5004651546478271",
+    "widget_settings": {
+     "label": "This reads the header with labels for each readout",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976876808,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "created: 31/10/2020\naccessed: 10/11/2020\nmodified: 31/10/2020\nUID: 501\nGID: 20\nfile size (bytes): 6332105\ntype: <class 'dict'>\n",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "I/O Info:",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "directory": "/Users/michaelschar/gpi/triggeredGASSP/example data",
+        "id": 5976877240,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "/Users/michaelschar/gpi/triggeredGASSP/example data/parameters.pickle",
+        "visible": false
+       },
+       "name": "File Browser",
+       "type": "<class 'gpi.widgets.OpenFileBrowser'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976877816,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "../RCA_triggeredGASSP_header.pickle",
+        "visible": true
+       },
+       "name": "File Name using out path from dictionary",
+       "type": "<class 'gpi.widgets.TextEdit'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "6.536100506782532",
+    "id": 5910109496,
+    "key": "triggeredGASSP.shapers.CollapseJHU",
+    "name": "CollapseJHU",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910109496,
+         "portID": 5910099864,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5911689544,
+         "portID": 5911708584,
+         "portName": "deblurred data flow",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5910099864,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910609496,
+         "portID": 5910692488,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5910109496,
+         "portID": 5910100008,
+         "portName": "Collapse Single Dim",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5910100008,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "Collapse Single Dim",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910100152,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "Collapse All Dims",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910100296,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "Max Val Index",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -23.75999999999999,
+     162.32
+    ],
+    "stdwalltime": "5.6224013566970825",
+    "walltime": "12.158501863479614",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5861506216,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "Ready",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Status",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5861506648,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "input: (2, 48, 485, 485)\noutput: (48, 485, 485)",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Info",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910209304,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 12,
+        "visible": true
+       },
+       "name": "Operation",
+       "type": "<class 'gpi.widgets.ExclusiveRadioButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910211320,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Compute",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910212040,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Collapse All",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910122712,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 3,
+        "visible": true
+       },
+       "name": "Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910123576,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Span Entire Dimension",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910124296,
+        "inport": false,
+        "max": 2,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": false
+       },
+       "name": "Dimension Start_Index",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910125448,
+        "inport": false,
+        "max": 2,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": false
+       },
+       "name": "Dimension Stop_Index",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910110072,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Flow",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910097992,
+        "inport": false,
+        "max": 500,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 35,
+        "visible": true
+       },
+       "name": "Venc",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910099144,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": false
+       },
+       "name": "Non-Zero",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.3122706413269043",
+    "id": 5970994520,
+    "key": "triggeredGASSP.fileIO.ReadPickled",
+    "name": "ReadPickled",
+    "ports": [
+     {
+      "connections": [],
+      "id": 5970993512,
+      "obligation": 200,
+      "portnum": 0,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5852652456,
+         "portID": 5968402328,
+         "portName": "params_in",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5911689544,
+         "portID": 5911708008,
+         "portName": "params_in",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5911414536,
+         "portID": 5911472168,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5911520744,
+         "portID": 5911538136,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5911519592,
+         "portID": 5909792952,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909893192,
+         "portName": "user_params",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5909903112,
+         "portID": 5909961752,
+         "portName": "params_in",
+         "portNum": 4
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5909989992,
+         "portID": 5909997032,
+         "portName": "params_in",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5976729496,
+         "portID": 5976774840,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5976849432,
+         "portID": 5976878392,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5976803800,
+         "portID": 5976864376,
+         "portName": "params_in",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5970994088,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -177.26,
+     -366.18
+    ],
+    "stdwalltime": "0.015522480010986328",
+    "walltime": "0.29674816131591797",
+    "widget_settings": {
+     "label": "Do this first: Browse to parameters.pickle file",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5971017800,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "created: 30/10/2020\naccessed: 10/11/2020\nmodified: 30/10/2020\nUID: 501\nGID: 20\nfile size (bytes): 1753\ntype: <class 'dict'>\n",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "I/O Info:",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "directory": "/Users/michaelschar/gpi/triggeredGASSP/example data",
+        "id": 5971018232,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "/Users/michaelschar/gpi/triggeredGASSP/example data/parameters.pickle",
+        "visible": true
+       },
+       "name": "File Browser",
+       "type": "<class 'gpi.widgets.OpenFileBrowser'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5971018808,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "extra_folder/output_filename",
+        "visible": false
+       },
+       "name": "File Name using out path from dictionary",
+       "type": "<class 'gpi.widgets.TextEdit'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.06212115287780762",
+    "id": 5911379400,
+    "key": "gpi_core.display.ImageDisplay",
+    "name": "ImageDisplay",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911379400,
+         "portID": 5911410872,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5910042520,
+         "portID": 5861391816,
+         "portName": "Collapse Single Dim",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911410872,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911411016,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911411160,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "temp",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     126.24000000000001,
+     199.32
+    ],
+    "stdwalltime": "0.0",
+    "walltime": "0.06212115287780762",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911387016,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 2,
+        "visible": true
+       },
+       "name": "Complex Display",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": true,
+        "id": 5911388024,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Color Map",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911389240,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Edge Pixels",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911390104,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Black Pixels",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911390968,
+        "inport": false,
+        "interp": true,
+        "line": null,
+        "noscroll": true,
+        "outport": false,
+        "points": null,
+        "quietval": null,
+        "scale": 1.0,
+        "val": null,
+        "visible": true
+       },
+       "name": "Viewport:",
+       "type": "<class 'gpi.widgets.DisplayBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911406920,
+        "inport": false,
+        "max": 48,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 34,
+        "visible": true
+       },
+       "name": "Slice",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911378104,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Slice/Tile Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911377240,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Extra Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911377816,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 1,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "# Columns",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911498824,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 1,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "# Rows",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911499688,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": {
+         "ceiling": 70,
+         "floor": 0,
+         "level": 35,
+         "window": 71
+        },
+        "visible": true
+       },
+       "name": "L W F C:",
+       "type": "<class '/Users/michaelschar/gpi_stack/envs/gpi/lib/python3.7/site-packages/gpi_core/display/GPI/ImageDisplay_GPI.WindowLevel'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911426392,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Scalar Display",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 3,
+        "id": 5911427112,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 10.0,
+        "min": 0.1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 0.05,
+        "val": 1.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Gamma",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911427976,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Zero Ref",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "Auto-Range On",
+        "collapsed": false,
+        "id": 5911428840,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Fix Range",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5911409144,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 0.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Range Min",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5911410008,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 0.09,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Range Max",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "6.542342901229858",
+    "id": 5910150600,
+    "key": "triggeredGASSP.shapers.CollapseJHU",
+    "name": "CollapseJHU",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910150600,
+         "portID": 5911269592,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5911689544,
+         "portID": 5911708584,
+         "portName": "deblurred data flow",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5911269592,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910195944,
+         "portID": 5910305240,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5910150600,
+         "portID": 5911269736,
+         "portName": "Collapse Single Dim",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911269736,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "Collapse Single Dim",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911269880,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "Collapse All Dims",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5911270024,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "Max Val Index",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -119.25999999999999,
+     161.82
+    ],
+    "stdwalltime": "5.05609393119812",
+    "walltime": "11.598436832427979",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911274408,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "Ready",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Status",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911274840,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "input: (2, 48, 485, 485)\noutput: (48, 485, 485)",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Info",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911275272,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 12,
+        "visible": true
+       },
+       "name": "Operation",
+       "type": "<class 'gpi.widgets.ExclusiveRadioButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5911286264,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Compute",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5911286984,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Collapse All",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911287704,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 3,
+        "visible": true
+       },
+       "name": "Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5911288568,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Span Entire Dimension",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911289288,
+        "inport": false,
+        "max": 2,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": false
+       },
+       "name": "Dimension Start_Index",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911278216,
+        "inport": false,
+        "max": 2,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": false
+       },
+       "name": "Dimension Stop_Index",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911279368,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 1,
+        "visible": true
+       },
+       "name": "Flow",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911279944,
+        "inport": false,
+        "max": 500,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 35,
+        "visible": false
+       },
+       "name": "Venc",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5911281096,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": false
+       },
+       "name": "Non-Zero",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.09578514099121094",
+    "id": 5911520744,
+    "key": "triggeredGASSP.fileIO.ReadNPY",
+    "name": "ReadNPY",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911520744,
+         "portID": 5911538136,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911538136,
+      "obligation": 200,
+      "portnum": 0,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909903112,
+         "portID": 5909961320,
+         "portName": "noise",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911520744,
+         "portID": 5911538280,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911538280,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -24.25999999999999,
+     -243.18
+    ],
+    "stdwalltime": "0.05939602851867676",
+    "walltime": "0.1551811695098877",
+    "widget_settings": {
+     "label": "This reads the noise for each channel",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911535832,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "created: 30/10/2020\naccessed: 10/11/2020\nmodified: 29/10/2020\nUID: 501\nGID: 20\nfile size (bytes): 4811328\ndimensions: [31, 19400]\ntype: complex64\n",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "I/O Info:",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "directory": "",
+        "id": 5911536264,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "",
+        "visible": false
+       },
+       "name": "File Browser",
+       "type": "<class 'gpi.widgets.OpenFileBrowser'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911536840,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "../RCA_triggeredGASSP_noise.npy",
+        "visible": true
+       },
+       "name": "File Name using out path from dictionary",
+       "type": "<class 'gpi.widgets.TextEdit'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5911537416,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Squeeze",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "2651.394683122635",
+    "id": 5970789864,
+    "key": "triggeredGASSP.iterative.NonLinCG-balancedPenaltyFlow_notGPU",
+    "name": "NonLinCG-balancedPenaltyFlow_notGPU",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5970789864,
+         "portID": 5970875736,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909820184,
+         "portID": 5909894200,
+         "portName": "sorted data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5970875736,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5970875880,
+      "obligation": 100,
+      "portnum": 1,
+      "porttitle": "coords",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5970789864,
+         "portID": 5970876024,
+         "portName": "weights",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5852652456,
+         "portID": 5968402472,
+         "portName": "sdc",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5970876024,
+      "obligation": 100,
+      "portnum": 2,
+      "porttitle": "weights",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5970876168,
+      "obligation": 200,
+      "portnum": 3,
+      "porttitle": "coil sensitivity",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5970789864,
+         "portID": 5970915688,
+         "portName": "mtx",
+         "portNum": 4
+        },
+        "src": {
+         "nodeID": 5852652456,
+         "portID": 5968404344,
+         "portName": "Effective MTX XY",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5970915688,
+      "obligation": 200,
+      "portnum": 4,
+      "porttitle": "mtx",
+      "porttype": 65540,
+      "widgetTitle": "mtx"
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910823128,
+         "portID": 5911488984,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970789864,
+         "portID": 5970876312,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5970876312,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5970876456,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "oversampled CSM",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5970876600,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "cropped CSM",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5970876744,
+      "obligation": null,
+      "portnum": 3,
+      "porttitle": "x iterations",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5861391096,
+         "portID": 5976987400,
+         "portName": "in1",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5970789864,
+         "portID": 5970876888,
+         "portName": "cost vs. time",
+         "portNum": 4
+        }
+       }
+      ],
+      "id": 5970876888,
+      "obligation": null,
+      "portnum": 4,
+      "porttitle": "cost vs. time",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     122.74000000000001,
+     39.81999999999999
+    ],
+    "stdwalltime": "0.0",
+    "walltime": "2651.394683122635",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5970895352,
+        "immediate": false,
+        "inport": true,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": 1.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 485.03,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "mtx",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5970896216,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 25,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "iterations",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 6,
+        "id": 5970897080,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.0,
+        "min": 0.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 0.03,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "lambda TV cardiac dimension",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 6,
+        "id": 5970897944,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.0,
+        "min": 0.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 0.015,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "lambda TV flow dimension",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": true,
+        "decimals": 3,
+        "id": 5970898808,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2.0,
+        "min": 1.0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 0.125,
+        "val": 1.375,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "oversampling ratio",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": true,
+        "id": 5970822056,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 64,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 8,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "number of threads",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5970822920,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 20,
+        "visible": true
+       },
+       "name": "Autocalibration Width (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5970824072,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 50,
+        "visible": true
+       },
+       "name": "Autocalibration Taper (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5970886728,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 4,
+        "visible": true
+       },
+       "name": "Mask Floor (% of max mag)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5970887880,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 20,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Autocalibration mask dilation [pixels]",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5970888744,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 10,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Autocalibration SDC Iterations",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5970993224,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Dynamic data - average all dynamics for csm",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5976950824,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Golden Angle - combine dynamics before gridding",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5970890184,
+        "inport": false,
+        "max": 10000,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 10000,
+        "visible": true
+       },
+       "name": "# golden angle dynamics for csm",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5970875016,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Store iterations",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.045889973640441895",
+    "id": 5910609496,
+    "key": "gpi_core.display.ImageDisplay",
+    "name": "ImageDisplay",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910609496,
+         "portID": 5910692488,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5910109496,
+         "portID": 5910100008,
+         "portName": "Collapse Single Dim",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5910692488,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910692632,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910692776,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "temp",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -23.75999999999999,
+     197.32
+    ],
+    "stdwalltime": "0.012819886207580566",
+    "walltime": "0.05870985984802246",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910607048,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 2,
+        "visible": false
+       },
+       "name": "Complex Display",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": true,
+        "id": 5910649160,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Color Map",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910650312,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Edge Pixels",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910643048,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Black Pixels",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910643912,
+        "inport": false,
+        "interp": true,
+        "line": null,
+        "noscroll": true,
+        "outport": false,
+        "points": null,
+        "quietval": null,
+        "scale": 1.0,
+        "val": null,
+        "visible": true
+       },
+       "name": "Viewport:",
+       "type": "<class 'gpi.widgets.DisplayBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910655768,
+        "inport": false,
+        "max": 48,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 34,
+        "visible": true
+       },
+       "name": "Slice",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5861149720,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Slice/Tile Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5861148856,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Extra Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5861150296,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 1,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "# Columns",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910657496,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 1,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "# Rows",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910658360,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": {
+         "ceiling": 70,
+         "floor": 0,
+         "level": 35,
+         "window": 71
+        },
+        "visible": true
+       },
+       "name": "L W F C:",
+       "type": "<class '/Users/michaelschar/gpi_stack/envs/gpi/lib/python3.7/site-packages/gpi_core/display/GPI/ImageDisplay_GPI.WindowLevel'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910675176,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Scalar Display",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 3,
+        "id": 5910688248,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 10.0,
+        "min": 0.1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 0.05,
+        "val": 1.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Gamma",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910689112,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Zero Ref",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "Auto-Range On",
+        "collapsed": false,
+        "id": 5910689976,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Fix Range",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5910690696,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": -35.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Range Min",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5910691560,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 35.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Range Max",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "1.4687438011169434",
+    "id": 5910042520,
+    "key": "triggeredGASSP.shapers.CollapseJHU",
+    "name": "CollapseJHU",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910042520,
+         "portID": 5861391672,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976803800,
+         "portID": 5976864952,
+         "portName": "deblurred data flow",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5861391672,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911379400,
+         "portID": 5911410872,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5910042520,
+         "portID": 5861391816,
+         "portName": "Collapse Single Dim",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5861391816,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "Collapse Single Dim",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5861391528,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "Collapse All Dims",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5861390232,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "Max Val Index",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     126.24000000000001,
+     164.32
+    ],
+    "stdwalltime": "0.0",
+    "walltime": "1.4687438011169434",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910042952,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "Ready",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Status",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5977094328,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "input: (2, 48, 485, 485)\noutput: (48, 485, 485)",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Info",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5977094760,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 12,
+        "visible": true
+       },
+       "name": "Operation",
+       "type": "<class 'gpi.widgets.ExclusiveRadioButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910087000,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Compute",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910087720,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Collapse All",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910088440,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 3,
+        "visible": true
+       },
+       "name": "Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910089304,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Span Entire Dimension",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910106472,
+        "inport": false,
+        "max": 2,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": false
+       },
+       "name": "Dimension Start_Index",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910107624,
+        "inport": false,
+        "max": 2,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": false
+       },
+       "name": "Dimension Stop_Index",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910041656,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 1,
+        "visible": true
+       },
+       "name": "Flow",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5861455336,
+        "inport": false,
+        "max": 500,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 35,
+        "visible": false
+       },
+       "name": "Venc",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5861454040,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": false
+       },
+       "name": "Non-Zero",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.08443057537078857",
+    "id": 5910195944,
+    "key": "gpi_core.display.ImageDisplay",
+    "name": "ImageDisplay",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910195944,
+         "portID": 5910305240,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5910150600,
+         "portID": 5911269736,
+         "portName": "Collapse Single Dim",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5910305240,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910305384,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910305528,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "temp",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -119.75999999999999,
+     197.32
+    ],
+    "stdwalltime": "0.02327859401702881",
+    "walltime": "0.10770916938781738",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910193496,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 2,
+        "visible": true
+       },
+       "name": "Complex Display",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": true,
+        "id": 5910227416,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Color Map",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910228568,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Edge Pixels",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910180344,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 0,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "Black Pixels",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910181208,
+        "inport": false,
+        "interp": true,
+        "line": null,
+        "noscroll": true,
+        "outport": false,
+        "points": null,
+        "quietval": null,
+        "scale": 1.0,
+        "val": null,
+        "visible": true
+       },
+       "name": "Viewport:",
+       "type": "<class 'gpi.widgets.DisplayBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910254504,
+        "inport": false,
+        "max": 48,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 34,
+        "visible": true
+       },
+       "name": "Slice",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910255656,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Slice/Tile Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910256376,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Extra Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910257096,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 1,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "# Columns",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910241640,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 1,
+        "visible": false,
+        "wrapping": false
+       },
+       "name": "# Rows",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910242504,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": {
+         "ceiling": 70,
+         "floor": 0,
+         "level": 35,
+         "window": 71
+        },
+        "visible": true
+       },
+       "name": "L W F C:",
+       "type": "<class '/Users/michaelschar/gpi_stack/envs/gpi/lib/python3.7/site-packages/gpi_core/display/GPI/ImageDisplay_GPI.WindowLevel'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910230648,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Scalar Display",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 3,
+        "id": 5910231368,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 10.0,
+        "min": 0.1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 0.05,
+        "val": 1.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Gamma",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910232232,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Zero Ref",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "Auto-Range On",
+        "collapsed": false,
+        "id": 5910302792,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Fix Range",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5910303512,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 0.0,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Range Min",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "decimals": 2,
+        "id": 5910304376,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 1.7976931348623157e+308,
+        "min": -1.7976931348623157e+308,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1.0,
+        "val": 0.09,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "Range Max",
+       "type": "<class 'gpi.widgets.DoubleSpinBox'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "1.0444579124450684",
+    "id": 5911783176,
+    "key": "triggeredGASSP.shapers.CollapseJHU",
+    "name": "CollapseJHU",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911783176,
+         "portID": 5910579816,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976803800,
+         "portID": 5976864952,
+         "portName": "deblurred data flow",
+         "portNum": 1
+        }
+       }
+      ],
+      "id": 5910579816,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5910706360,
+         "portID": 5910790360,
+         "portName": "in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5911783176,
+         "portID": 5910579960,
+         "portName": "Collapse Single Dim",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5910579960,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "Collapse Single Dim",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910580104,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "Collapse All Dims",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5910580248,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "Max Val Index",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     217.24,
+     164.32
+    ],
+    "stdwalltime": "0.0",
+    "walltime": "1.0444579124450684",
+    "widget_settings": {
+     "label": "",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911876088,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "Ready",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Status",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911876520,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "input: (2, 48, 485, 485)\noutput: (48, 485, 485)",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "Info",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911876952,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 12,
+        "visible": true
+       },
+       "name": "Operation",
+       "type": "<class 'gpi.widgets.ExclusiveRadioButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910663240,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Compute",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910663960,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Collapse All",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910664680,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 3,
+        "visible": true
+       },
+       "name": "Dimension",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910665544,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Span Entire Dimension",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910666264,
+        "inport": false,
+        "max": 2,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": false
+       },
+       "name": "Dimension Start_Index",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5910577368,
+        "inport": false,
+        "max": 2,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": false
+       },
+       "name": "Dimension Stop_Index",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911782312,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "Flow",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5852554584,
+        "inport": false,
+        "max": 500,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 35,
+        "visible": true
+       },
+       "name": "Venc",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5910579096,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": false
+       },
+       "name": "Non-Zero",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "0.1503124237060547",
+    "id": 5911414536,
+    "key": "triggeredGASSP.fileIO.ReadNPY",
+    "name": "ReadNPY",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911414536,
+         "portID": 5911472168,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911472168,
+      "obligation": 200,
+      "portnum": 0,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5911689544,
+         "portID": 5911707864,
+         "portName": "coords",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909901176,
+         "portName": "coords",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5909903112,
+         "portID": 5909961464,
+         "portName": "coords",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5909989992,
+         "portID": 5909996888,
+         "portName": "crds",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       },
+       {
+        "dest": {
+         "nodeID": 5976803800,
+         "portID": 5976864232,
+         "portName": "coords",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5911472312,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     173.74,
+     -312.18
+    ],
+    "stdwalltime": "0.021184444427490234",
+    "walltime": "0.17149686813354492",
+    "widget_settings": {
+     "label": "This reads the coordiantes for each readout",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911470584,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "created: 30/10/2020\naccessed: 10/11/2020\nmodified: 30/10/2020\nUID: 501\nGID: 20\nfile size (bytes): 93904128\ndimensions: [1000, 5869, 2]\ntype: float64\n",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "I/O Info:",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "directory": "",
+        "id": 5911471016,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "",
+        "visible": false
+       },
+       "name": "File Browser",
+       "type": "<class 'gpi.widgets.OpenFileBrowser'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5911471592,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "../RCA_triggeredGASSP_coords.npy",
+        "visible": true
+       },
+       "name": "File Name using out path from dictionary",
+       "type": "<class 'gpi.widgets.TextEdit'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5911413528,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "Squeeze",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "49.34317445755005",
+    "id": 5909903112,
+    "key": "triggeredGASSP.math.VirtualChannels",
+    "name": "VirtualChannels",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909903112,
+         "portID": 5909961176,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909989992,
+         "portID": 5909997176,
+         "portName": "adjusted data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909961176,
+      "obligation": 100,
+      "portnum": 0,
+      "porttitle": "data",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909903112,
+         "portID": 5909961320,
+         "portName": "noise",
+         "portNum": 1
+        },
+        "src": {
+         "nodeID": 5911520744,
+         "portID": 5911538280,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909961320,
+      "obligation": 100,
+      "portnum": 1,
+      "porttitle": "noise",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909903112,
+         "portID": 5909961464,
+         "portName": "coords",
+         "portNum": 2
+        },
+        "src": {
+         "nodeID": 5911414536,
+         "portID": 5911472312,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909961464,
+      "obligation": 200,
+      "portnum": 2,
+      "porttitle": "coords",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909961608,
+      "obligation": 200,
+      "portnum": 3,
+      "porttitle": "sensitivity map",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909903112,
+         "portID": 5909961752,
+         "portName": "params_in",
+         "portNum": 4
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909961752,
+      "obligation": 200,
+      "portnum": 4,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909820184,
+         "portID": 5909901032,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5909903112,
+         "portID": 5909961896,
+         "portName": "compressed data",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5909961896,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "compressed data",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909962040,
+      "obligation": null,
+      "portnum": 1,
+      "porttitle": "A",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909962184,
+      "obligation": null,
+      "portnum": 2,
+      "porttitle": "noise covariance",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909962328,
+      "obligation": null,
+      "portnum": 3,
+      "porttitle": "masked and normalized sense map",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909962472,
+      "obligation": null,
+      "portnum": 4,
+      "porttitle": "sum of square image",
+      "porttype": 65541,
+      "widgetTitle": null
+     },
+     {
+      "connections": [],
+      "id": 5909962616,
+      "obligation": null,
+      "portnum": 5,
+      "porttitle": "debug",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -167.26,
+     -188.18
+    ],
+    "stdwalltime": "25.517621377292077",
+    "walltime": "70.65299081802368",
+    "widget_settings": {
+     "label": "Do this second: Crop out the heart and press compute.",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909922296,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 485,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "mtx",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909923160,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": 0,
+        "visible": true
+       },
+       "name": "trajectory",
+       "type": "<class 'gpi.widgets.ExclusivePushButtons'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909923736,
+        "inport": false,
+        "interp": true,
+        "line": null,
+        "noscroll": true,
+        "outport": false,
+        "points": null,
+        "quietval": null,
+        "scale": 4.3,
+        "val": null,
+        "visible": true
+       },
+       "name": "image",
+       "type": "<class 'gpi.widgets.DisplayBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909943784,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 80,
+        "visible": true
+       },
+       "name": "image ceiling",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909902248,
+        "inport": false,
+        "max": 145,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 20,
+        "visible": true
+       },
+       "name": "crop left",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909944936,
+        "inport": false,
+        "max": 145,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 86,
+        "visible": true
+       },
+       "name": "crop right",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909946088,
+        "inport": false,
+        "max": 145,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 45,
+        "visible": true
+       },
+       "name": "crop top",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909840808,
+        "inport": false,
+        "max": 145,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "val": 96,
+        "visible": true
+       },
+       "name": "crop bottom",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": true,
+        "id": 5909841960,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "reset compute button each time",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5909842680,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": false,
+        "visible": true
+       },
+       "name": "compute",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909843400,
+        "immediate": true,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": -2147483648,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 12,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "virtual channels",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909946728,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 30,
+        "visible": true
+       },
+       "name": "Autocalibration Width (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909947880,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 50,
+        "visible": true
+       },
+       "name": "Autocalibration Taper (%)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909949032,
+        "inport": false,
+        "max": 100,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 4,
+        "visible": true
+       },
+       "name": "Mask Floor (% of max mag)",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909950184,
+        "inport": false,
+        "max": 1000,
+        "min": 0,
+        "outport": false,
+        "quietval": null,
+        "val": 1000,
+        "visible": true
+       },
+       "name": "# golden angle dynamics for csm",
+       "type": "<class 'gpi.widgets.Slider'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "ON",
+        "collapsed": false,
+        "id": 5909959592,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Dynamic data - average all dynamics for csm",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5909960312,
+        "immediate": false,
+        "inport": false,
+        "label": "",
+        "max": 2147483647,
+        "min": 1,
+        "outport": false,
+        "quietval": null,
+        "singlestep": 1,
+        "val": 10,
+        "visible": true,
+        "wrapping": false
+       },
+       "name": "SDC Iterations",
+       "type": "<class 'gpi.widgets.SpinBox'>"
+      }
+     ]
+    }
+   },
+   {
+    "avgwalltime": "1.5262153148651123",
+    "id": 5976729496,
+    "key": "triggeredGASSP.fileIO.ReadNPY",
+    "name": "ReadNPY",
+    "ports": [
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5976729496,
+         "portID": 5976774840,
+         "portName": "params_in",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5970994520,
+         "portID": 5970994088,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976774840,
+      "obligation": 200,
+      "portnum": 0,
+      "porttitle": "params_in",
+      "porttype": 65540,
+      "widgetTitle": null
+     },
+     {
+      "connections": [
+       {
+        "dest": {
+         "nodeID": 5909989992,
+         "portID": 5909996744,
+         "portName": "data",
+         "portNum": 0
+        },
+        "src": {
+         "nodeID": 5976729496,
+         "portID": 5976774984,
+         "portName": "out",
+         "portNum": 0
+        }
+       }
+      ],
+      "id": 5976774984,
+      "obligation": null,
+      "portnum": 0,
+      "porttitle": "out",
+      "porttype": 65541,
+      "widgetTitle": null
+     }
+    ],
+    "pos": [
+     -27.25999999999999,
+     -311.18
+    ],
+    "stdwalltime": "0.0018913745880126953",
+    "walltime": "1.5243239402770996",
+    "widget_settings": {
+     "label": "This reads the data",
+     "parms": [
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976773256,
+        "inport": false,
+        "openExternalLinks": false,
+        "outport": false,
+        "quietval": null,
+        "val": "created: 30/10/2020\naccessed: 10/11/2020\nmodified: 29/10/2020\nUID: 501\nGID: 20\nfile size (bytes): 2911024128\ndimensions: [31, 2, 1000, 5869]\ntype: complex64\n",
+        "visible": true,
+        "wordwrap": false
+       },
+       "name": "I/O Info:",
+       "type": "<class 'gpi.widgets.TextBox'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "directory": "",
+        "id": 5976773688,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "",
+        "visible": false
+       },
+       "name": "File Browser",
+       "type": "<class 'gpi.widgets.OpenFileBrowser'>"
+      },
+      {
+       "kwargs": {
+        "collapsed": false,
+        "id": 5976774264,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "val": "../RCA_triggeredGASSP_data.npy",
+        "visible": true
+       },
+       "name": "File Name using out path from dictionary",
+       "type": "<class 'gpi.widgets.TextEdit'>"
+      },
+      {
+       "kwargs": {
+        "button_title": "",
+        "collapsed": false,
+        "id": 5976728488,
+        "inport": false,
+        "outport": false,
+        "quietval": null,
+        "toggle": true,
+        "val": true,
+        "visible": true
+       },
+       "name": "Squeeze",
+       "type": "<class 'gpi.widgets.PushButton'>"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}
