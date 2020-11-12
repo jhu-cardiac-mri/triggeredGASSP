@@ -14,10 +14,15 @@ additionally to what is included with GPI, add the following python packages:
 
 # some nodes need to be compiled
 use
+
     $ gpi_make -all
+
 in 
+
     /iterate
+    
     /iterate/GPI
+    
     /spiral
 
 # GPU
