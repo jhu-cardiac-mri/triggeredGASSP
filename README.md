@@ -2,7 +2,9 @@
 This repository contains the GPI nodes and network used to reconstruct phase contrast MRI images presented in the manuscript "Phase contrast coronary blood velocity mapping with both high temporal and spatial resolution using triggered Golden Angle rotated Spiral k-t Sparse Parallel imaging (GASSP) with shifted binning".
 
 Example data can be downloaded at
-    https://
+
+    https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/mschar3_jh_edu/EnPgpmVd7RtKiHAk-eWcRhYB7TLz-mKoSrQ5Yh5MbLzobA?e=wOWo8h
+    
 and should be copied to the folder called "example data".
 
 # GPI version
