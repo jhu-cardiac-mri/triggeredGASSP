@@ -15,7 +15,10 @@ additionally to what is included with GPI, add the following python packages:
 # some nodes need to be compiled
 use
     $ gpi_make -all
-in /iterate/GPI
+in 
+    /iterate
+    /iterate/GPI
+    /spiral
 
 # GPU
 Some nodes have a GPU version that requires CUPY. 
