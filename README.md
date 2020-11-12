@@ -28,7 +28,7 @@ Some nodes have a GPU version that requires CUPY.
 If using the GPU, we recommend a card with >10GB of RAM to run the example data (We are using NVIDIA GeForce GTX 1080 Ti).
 
 # Installation
-Clone this repo into your ~/gpi directory by entering:
+Download as a zip or clone this repo into your ~/gpi directory by entering:
 
     $ git clone https://github.com/jhu-cardiac-mri/triggeredGASSP.git triggeredGASSP
 
