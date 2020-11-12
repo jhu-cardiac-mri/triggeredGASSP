@@ -21,11 +21,7 @@ use
 
 in 
 
-    /iterate
-    
-    /iterate/GPI
-    
-    /spiral
+    /gridding
 
 # GPU
 Some nodes have a GPU version that requires CUPY. 
